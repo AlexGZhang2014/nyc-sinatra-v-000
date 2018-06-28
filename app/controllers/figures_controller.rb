@@ -11,6 +11,7 @@ class FiguresController < ApplicationController
   end
   
   post '/figures' do
+    binding.pry
     @figure = Figure.create(name: params["figure[name]"])
     @figure.title_ids = params[:titles]
     @figure.landmark_ids = params[:landmarks]
