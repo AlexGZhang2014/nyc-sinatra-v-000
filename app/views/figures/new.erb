@@ -28,18 +28,3 @@
   <br><br>
   <input type="submit" value="Create New Figure">
 </form>
-
-<!-- 
-
-  it "allows you to create a new figure with a new landmark" do
-    visit '/figures/new'
-    fill_in :figure_name, :with => "Doctor Who"
-    fill_in :new_landmark, :with => "The Tardis"
-    click_button "Create New Figure"
-    figure = Figure.last
-    landmark = Landmark.last
-    expect(Figure.all.count).to eq(3)
-    expect(Landmark.all.count).to eq(2)
-    expect(figure.name).to eq("Doctor Who")
-    expect(figure.landmarks).to include(landmark)
-  end -->
