@@ -22,28 +22,28 @@ class LandmarksController < ApplicationController
     redirect to "/landmark/#{@landmark.id}"
   end
   
-  get '/figures/:id' do
-    @figure = Figure.find_by_id(params[:id])
-    erb :'figures/show'
+  get '/landmarks/:id' do
+    @landmark = Landmark.find_by_id(params[:id])
+    erb :'landmarks/show'
   end
   
-  get '/figures/:id/edit' do
-    @figure = Figure.find_by_id(params[:id])
+  get '/landmarks/:id/edit' do
+    @landmark = Landmark.find_by_id(params[:id])
     @titles = Title.all
-    @landmarks = Landmark.all
-    erb :'figures/edit'
+    @figures = Figure.all
+    erb :'landmarks/edit'
   end
   
-  patch '/figures/:id' do
-    @figure = Figure.find_by_id(params[:id])
-    @figure.update(params[:figure])
+  patch '/landmarks/:id' do
+    @landmark = Landmark.find_by_id(params[:id])
+    @landmark.update(params[:landmark])
     if !params[:title][:name].empty?
-      @figure.titles << Title.create(params[:title])
+      @landmark.titles << Title.create(params[:title])
     end
-    if !params[:landmark][:name].empty?
-      @figure.landmarks << Landmark.create(params[:landmark])
+    if !params[:figure][:name].empty?
+      @landmark.figures << Figure.create(params[:figure])
     end
-    @figure.save
-    redirect to "/figures/#{@figure.id}"
+    @landmark.save
+    redirect to "/landmark/#{@landmark.id}"
   end
 end
