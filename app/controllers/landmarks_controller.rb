@@ -4,14 +4,14 @@ class LandmarksController < ApplicationController
     erb :'landmarks/index'
   end
   
-  get '/figures/new' do
+  get '/landmarks/new' do
     @titles = Title.all
-    @landmarks = Landmark.all
-    erb :'figures/new'
+    @figures = Figure.all
+    erb :'landmarks/new'
   end
   
-  post '/figures' do
-    @figure = Figure.create(params[:figure])
+  post '/landmarks' do
+    @landmark = Landmark.create(params[:landmark])
     if !params[:title][:name].empty?
       @figure.titles << Title.create(params[:title])
     end
