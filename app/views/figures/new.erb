@@ -31,21 +31,6 @@
 
 <!-- 
 
-  
-
-   it "allows you to create a new figure with a new title" do
-    visit '/figures/new'
-    fill_in :figure_name, :with => "Doctor Who"
-    fill_in :new_title, :with => "Time Lord"
-    click_button "Create New Figure"
-    figure = Figure.last
-    title = Title.last
-    expect(Figure.all.count).to eq(3)
-    expect(Title.all.count).to eq(2)
-    expect(figure.name).to eq("Doctor Who")
-    expect(figure.titles).to include(title)
-  end
-
   it "allows you to create a new figure with a new landmark" do
     visit '/figures/new'
     fill_in :figure_name, :with => "Doctor Who"
