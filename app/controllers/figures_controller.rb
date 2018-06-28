@@ -12,9 +12,9 @@ class FiguresController < ApplicationController
   
   post '/figures' do
     @figure = Figure.create(name: params["figure[name]"])
-    @figure.artist = Artist.find_or_create_by(name: params["Artist Name"])
-    @song.genre_ids = params[:genres]
-    @song.save
+    @figure.title_ids = params[:titles]
+    @figure.landmark_ids = params[:landmarks]
+    @figure.save
     redirect to "/figures/#{@figure.id}"
   end
 end
