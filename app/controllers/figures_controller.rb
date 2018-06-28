@@ -9,5 +9,5 @@ class FiguresController < ApplicationController
   end
   
   post '/figures' do
-    
+    redirect to '/figures/'
 end
