@@ -15,7 +15,7 @@
   <h3><label for="new_title">Create New Title:</label></h3>
   <input type="text" name="title[name]" id="new_title">
   <br>
-  <h3><label>Landmarks</label></h3>
+  <h3><label>Edit Landmarks</label></h3>
   <% @landmarks.each do |landmark| %>
     <label><%= landmark.name %></label>
     <input type="checkbox" name="figure[landmark_ids][]" id="landmark_<%= landmark.id %>" value="<%= landmark.id %>" <%= "checked" if @figure.landmarks.include?(landmark) %>>
