@@ -6,7 +6,7 @@
   <h3><label>Titles</label></h3>
   <% @titles.each do |title| %>
     <label><%= title.name %></label>
-    <input type="checkbox" name="figure[title_ids][]" id="<%= title.name %>" value="<%= title.id %>">
+    <input type="checkbox" name="figure[title_ids][]" id="title_<%= title.name %>" value="<%= title.id %>">
     <br>
   <% end %>
   <br>
