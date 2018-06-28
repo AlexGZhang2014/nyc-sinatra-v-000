@@ -35,6 +35,7 @@ class FiguresController < ApplicationController
   end
   
   patch '/figures/:id' do
-    
+    @figure = Figure.find_by_id(params[:id])
+    @song.update(name: params[:song][:name], artist: Artist.find_or_create_by(name: params[:artist][:name]), genre_ids: params[:genres])
   end
 end
