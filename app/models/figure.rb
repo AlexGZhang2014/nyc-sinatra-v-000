@@ -1,1 +1,2 @@
-class Figure < 
+class Figure < ActiveRecord::Base
+end
