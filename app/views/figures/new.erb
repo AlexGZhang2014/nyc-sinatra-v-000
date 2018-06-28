@@ -15,7 +15,7 @@
   <br>
   <h3><label>Landmarks</label></h3>
   <br>
-  <% Landmark.all.each do |genre| %>
+  <% @landmarks.each do |genre| %>
     <label><%= genre.name %></label>
     <input type="checkbox" name="genres[]" id="<%= genre.name %>" value="<%= genre.id %>">
   <% end %>
