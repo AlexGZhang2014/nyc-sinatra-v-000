@@ -4,7 +4,7 @@
   <input type="text" name="figure[name]" id="figure_name">
 </form>
 
-it "allows you to view form to create a new figure" do
+<!-- it "allows you to view form to create a new figure" do
     visit '/figures/new'
     expect(page.body).to include('<form>')
     expect(page.body).to include('figure[name]')
@@ -60,4 +60,4 @@ it "allows you to view form to create a new figure" do
     expect(Landmark.all.count).to eq(2)
     expect(figure.name).to eq("Doctor Who")
     expect(figure.landmarks).to include(landmark)
-  end
+  end -->
