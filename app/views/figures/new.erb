@@ -14,7 +14,6 @@
   <input type="text" name="title[name]" id="title_name">
   <br>
   <h3><label>Landmarks</label></h3>
-  <br>
   <% @landmarks.each do |landmark| %>
     <label><%= landmark.name %></label>
     <input type="checkbox" name="figure[landmark_ids][]" id="<%= landmark.name %>" value="<%= landmark.id %>">
