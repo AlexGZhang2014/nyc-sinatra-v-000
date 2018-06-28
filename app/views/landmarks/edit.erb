@@ -2,16 +2,9 @@
 <h2><%= @landmark.name %></h2>
 <form method="POST" action="/landmark">
   <input type="hidden" id="hidden" name="_method" value="PATCH">
-  <label for="figure_name">Name: </label>
-  <input type="text" name="figure[name]" id="figure_name">
+  <label for="landmark_name">Name: </label>
+  <input type="text" name="landmark[name]" id="landmark_name">
   <br><br>
-  <h3><label>Edit Titles</label></h3>
-  <% @titles.each do |title| %>
-    <label><%= title.name %></label>
-    <input type="checkbox" name="figure[title_ids][]" id="title_<%= title.id %>" value="<%= title.id %>" <%= "checked" if @figure.titles.include?(title) %>>
-    <br>
-  <% end %>
-  <br>
   <h3><label for="new_title">Create New Title:</label></h3>
   <input type="text" name="title[name]" id="new_title">
   <br>
