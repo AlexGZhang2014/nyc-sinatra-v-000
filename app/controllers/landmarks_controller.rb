@@ -22,8 +22,6 @@ class LandmarksController < ApplicationController
   
   get '/landmarks/:id/edit' do
     @landmark = Landmark.find_by_id(params[:id])
-    @titles = Title.all
-    @figures = Figure.all
     erb :'landmarks/edit'
   end
   
