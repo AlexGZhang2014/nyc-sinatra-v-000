@@ -5,8 +5,8 @@
   <br>
   <label>Titles</label>
   <br>
-  <% Genre.all.each do |genre| %>
-    <label><%= genre.name %></label>
+  <% Title.all.each do |title| %>
+    <label><%= title.name %></label>
     <input type="checkbox" name="genres[]" id="<%= genre.name %>" value="<%= genre.id %>">
   <% end %>
   <br>
