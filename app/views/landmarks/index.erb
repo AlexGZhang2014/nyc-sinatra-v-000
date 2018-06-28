@@ -1,4 +1,4 @@
 <h1>All Historical Landmarks</h1>
-<% @figures.all.each do |figure| %>
-  <h3><a href="/figures/<%= figure.id %>"><%= figure.name %></a></h3>
+<% @landmarks.all.each do |landmark| %>
+  <h3><a href="/landmarks/<%= landmark.id %>"><%= landmark.name %></a></h3>
 <% end %>
