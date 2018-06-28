@@ -12,7 +12,7 @@ class FiguresController < ApplicationController
   
   post '/figures' do
     @figure = Figure.create(name: params["figure[name]"])
-    if !
+    if !params[:landmark][:name]
     @figure.save
     redirect to "/figures/#{@figure.id}"
   end
