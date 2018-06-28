@@ -33,4 +33,6 @@ class FiguresController < ApplicationController
     @landmarks = Landmark.all
     erb :'figures/edit'
   end
+  
+  patch '/figures/'
 end
