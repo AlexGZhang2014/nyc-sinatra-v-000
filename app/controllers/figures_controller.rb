@@ -13,6 +13,7 @@ class FiguresController < ApplicationController
   post '/figures' do
     @figure = Figure.create(params[:figure])
     if !params[:landmark][:name].empty?
+      @figure.landmarks << Landmark.create
     @figure.save
     redirect to "/figures/#{@figure.id}"
   end
