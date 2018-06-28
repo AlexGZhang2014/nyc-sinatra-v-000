@@ -15,9 +15,9 @@
   <br>
   <h3><label>Landmarks</label></h3>
   <br>
-  <% @landmarks.each do |genre| %>
-    <label><%= genre.name %></label>
-    <input type="checkbox" name="genres[]" id="<%= genre.name %>" value="<%= genre.id %>">
+  <% @landmarks.each do |landmark| %>
+    <label><%= landmark.name %></label>
+    <input type="checkbox" name="" id="<%= landmark.name %>" value="<%= genre.id %>">
   <% end %>
   <br><br>
   <input type="submit" value="Create New Figure">
