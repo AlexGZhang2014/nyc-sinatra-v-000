@@ -1,6 +1,7 @@
 <h1>Add a New Historical Figure</h1>
 <form method="POST" action="/figures">
-  
+  <label for="figure_name">Name: </label>
+  <input type="text" name="figure[name]" id="figure_name">
 </form>
 
 it "allows you to view form to create a new figure" do
